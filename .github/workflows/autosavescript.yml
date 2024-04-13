@@ -27,7 +27,7 @@ jobs:
         pip install pandas requests
 
     - name: Run script
-      run: python ../fetchsaveAPIdata_DS.py
+      run: python .github/fetchsaveAPIdata_DS.py
 
     - name: Archive data on failure
       if: failure()  # This step will run only if the previous step fails
