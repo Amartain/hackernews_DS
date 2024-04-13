@@ -26,4 +26,4 @@ jobs:
         pip install pandas requests
 
     - name: Run script
-      run: python path_to_your_script.py
+      run: python ../fetchsaveAPIdata_DS.py
