@@ -6,6 +6,8 @@ on:
     - cron: '0 18 * * *'  # Runs every day at 1:00 PM US Central Time
     - cron: '0 1 * * *'   # Runs every day at 8:00 PM US Central Time
     - cron: '0 6 * * *'   # Runs every day at 1:00 AM US Central Time
+  workflow_dispatch:  # This allows the workflow to be triggered manually
+
 
 jobs:
   fetch-and-save-data:
