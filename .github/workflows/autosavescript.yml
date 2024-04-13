@@ -36,8 +36,9 @@ jobs:
         git add -A
         if [[ $(git diff --stat --staged) != '' ]]; then
           git commit -m "Add changes"
-          git push https://${{ secrets.LET_ME_SAVE_FILES}}@github.com/Amartain/hackernews_DS
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/Amartain/hackernews_DS.git
         fi
+    
 
     - name: Archive data on failure
       if: failure()  # This step will run only if the previous step fails
