@@ -29,6 +29,16 @@ jobs:
     - name: Run script
       run: python .github/fetchsaveAPIdata_DS.py
 
+    - name: Commit and push if it's necessary
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        if [[ $(git diff --stat --staged) != '' ]]; then
+          git commit -m "Latest API data, fetched by scheduled action."
+          git push
+        fi
+
     - name: Archive data on failure
       if: failure()  # This step will run only if the previous step fails
       uses: actions/upload-artifact@v2
