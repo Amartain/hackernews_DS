@@ -35,7 +35,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A
         if [[ $(git diff --stat --staged) != '' ]]; then
-          git commit -m "Add changes"
+          git commit -m "Github Actions Scheduled API data fetch."
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/Amartain/hackernews_DS.git
         fi
     
