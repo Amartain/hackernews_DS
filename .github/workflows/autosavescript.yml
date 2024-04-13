@@ -35,8 +35,8 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A
         if [[ $(git diff --stat --staged) != '' ]]; then
-          git commit -m "Latest API data, fetched by scheduled action."
-          git push
+          git commit -m "Add changes"
+          git push https://${{ secrets.LET_ME_SAVE_FILES}}@github.com/Amartain/hackernews_DS.git
         fi
 
     - name: Archive data on failure
