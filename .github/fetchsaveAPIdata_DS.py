@@ -19,7 +19,7 @@ now = datetime.now(central)
 file_name = now.strftime("%Y-%m-%d_%H-%M-%S") + ".csv"
 
 
-file_path = '../API_data/'
+file_path = './API_data/'
 
 # Check if the directory exists! --- else it will never work LOL
 if not os.path.exists(file_path):
